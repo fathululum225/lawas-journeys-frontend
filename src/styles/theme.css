@@ -1,0 +1,102 @@
+/* ==========================================================================
+   theme.css
+   Single source of truth for every color, font and size used by the site.
+   Ported from the legacy variables.css: the token names are unchanged, so the legacy
+   component styles keep working, and Tailwind generates its utilities from the same values
+   (bg-primary, text-text-muted, rounded-md, shadow-md, font-heading...).
+   "static" makes Tailwind always emit the variables, even when no utility uses them.
+   ========================================================================== */
+
+@theme static {
+  /* ---- Colors: earth tones ---------------------------------------------- */
+  --color-bg: #fdfbf8;               /* page background, a touch lighter than ivory */
+  --color-ivory: #f7f3ed;            /* ivory: sidebar cards, banners, footer */
+  --color-ivory-dark: #eee6da;       /* hover / pressed state on ivory surfaces */
+  --color-surface: #ffffff;          /* cards and inputs */
+
+  --color-text: #2e2a26;             /* dark brown body text */
+  --color-text-muted: #6f675f;
+  --color-text-soft: #9a9189;
+
+  --color-primary: #e4572e;          /* brick red: buttons, prices, highlights */
+  --color-primary-dark: #c8441d;
+  --color-primary-soft: #fcece6;
+
+  --color-gold: #e0a02b;             /* rating stars */
+  --color-accent: #b5762f;           /* gold-brown: active nav, underlines, line icons */
+
+  --color-border: #e8e0d5;
+  --color-border-strong: #d6cabb;
+
+  --color-success: #2f8f5b;
+  --color-success-soft: #e5f4ec;
+  --color-warning: #b9791a;
+  --color-warning-soft: #fbf0db;
+  --color-danger: #c0392b;
+  --color-danger-soft: #fbe9e6;
+  --color-info: #3b6ea5;
+  --color-info-soft: #e6eef7;
+
+  --color-overlay: rgba(46, 42, 38, 0.55);
+
+  /* Admin panel */
+  --color-admin-sidebar: #26221f;
+  --color-admin-sidebar-hover: #342f2b;
+  --color-admin-surface: #f5f2ed;
+
+  /* ---- Typography -------------------------------------------------------- */
+  --font-heading: 'Playfair Display Variable', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.625rem;
+  --text-4xl: 3.375rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.6;
+
+  /* ---- Spacing ----------------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  /* ---- Layout ------------------------------------------------------------ */
+  --container-width: 1240px;
+  --container-padding: 1.5rem;
+  --sidebar-width: 244px;
+  --header-height: 76px;
+
+  /* ---- Shape & depth ----------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(46, 42, 38, 0.06), 0 2px 8px rgba(46, 42, 38, 0.06);
+  --shadow-md: 0 6px 20px rgba(46, 42, 38, 0.1);
+  --shadow-lg: 0 18px 48px rgba(46, 42, 38, 0.18);
+
+  /* ---- Motion & stacking ------------------------------------------------- */
+  --transition: 180ms ease;
+
+  --z-whatsapp: 90;
+  --z-header: 100;
+  --z-modal: 300;
+  --z-toast: 400;
+}

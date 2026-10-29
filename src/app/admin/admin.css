@@ -1,0 +1,2 @@
+/* Admin panel styles (legacy admin.css), loaded only on /admin routes and kept in the same cascade layer as the site styles. */
+@import '../../styles/legacy/admin.css' layer(components);

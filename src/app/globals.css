@@ -1,0 +1,36 @@
+/* ==========================================================================
+   globals.css
+   Entry stylesheet of the app.
+
+   Layer order (lowest to highest priority):
+     theme       design tokens (theme.css) and Tailwind's own theme
+     base        document reset and typography (legacy base.css)
+     components  the Lawas Journeys BEM component styles (legacy layout/components/admin.css)
+     utilities   Tailwind utility classes, which can therefore still override a component
+
+   Tailwind's preflight reset is intentionally NOT imported: legacy base.css is the reset,
+   so every element keeps exactly the browser defaults the original design was built on.
+   ========================================================================== */
+
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@import '../styles/theme.css' layer(theme);
+@import '../styles/legacy/base.css' layer(base);
+@import '../styles/legacy/layout.css' layer(components);
+@import '../styles/legacy/components.css' layer(components);
+
+/* Tailwind ships its own responsive ".container"; the site's container (legacy layout.css) wins. */
+@utility container {
+  width: 100%;
+  max-width: calc(var(--container-width) + var(--container-padding) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+/* Added during the Next.js migration (no equivalent in the legacy site). */
+@layer components {
+  .filters.is-pending { opacity: 0.7; transition: opacity var(--transition-fast, 0.15s); }
+}
